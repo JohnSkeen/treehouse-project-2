@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   background-color: #fafafa;
@@ -15,80 +15,224 @@ body {
 
 .nav {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li a {
-  display: block;
-  width: 100%;
 }
 
 ul.topnav {
     list-style-type: none;
-    margin: 20px 10px 0 10px;
-    padding: 0px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
     overflow: hidden;
-    background-color: #fff;
 }
 
-ul.topnav li {
-  float: left;
-}
 
 ul.topnav li a {
     display: block;
-    color: black;
     text-align: center;
-    padding: 14px 16px;
+    color: black;
+    padding: 15px 20px;
     text-decoration: none;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 ul.topnav li.name {
   display: block;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: bold;
 }
 
-ul.topnav li a:hover:not(.active) {
+ul.topnav .button a:hover:not(.active) {
   background-color: #111;
   color: white;
 }
 
-ul.topnav li a.active {
-  color: white;
-  background-color: #111;
+ul.topnav li.button {
+  background-color: #fff;
 }
-
-ul.topnav li.right {
-  float: right;
-}
-
 
 
 /* Section Styles */
 
+header {
+  margin: 40px 20px 0 20px;
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-family: 'Source Code Pro', monospace;
+  text-transform: uppercase;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 0;
+}
+
+h2 {
+ font-size: 1.4rem;
+}
+
 .wrapper {
-  background-color: white;
-  margin: 0 20px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 0 40px 20px 40px;
+  width: 100%;
 }
 
 .profile-image {
   margin: 0 auto;
   max-width: 100%;
-  padding: 10px 40px;
 }
 
 .portfolio-images {
   margin: 0 auto;
   max-width: 100%;
-  padding: 10px 20px;
 }
+
+.contact {
+  margin-bottom: 65px;
+}
+
+.item {
+  margin: 0 5px 30px 5px;
+}
+
+.item p {
+  padding: 0 20px;
+}
+
+.extra-content {
+  padding: 0 30px;
+}
+
+/* Styles for footer */
+
+footer {
+  font-family: 'Source Code Pro', monospace;
+  padding: 0 30px;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 30px 0px;
+  display: block;
+  font-weight: bold;
+  border-top: 2px #e7e7e7 solid;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-name {
+  float: left;
+}
+
+.back-to-home {
+  float: right;
+}
+
+.bottom-button {
+  display: none;
+}
+
+.bottom-button a {
+  padding: 15px 20px;
+}
+
+.bottom-button a:hover:not(.active) {
+  background-color: #111;
+  color: white;
+}
+
+/* Clearfix */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 
 
 /* Styles for larger screens */
 
-@media screen and (max-width: 600px){
-    ul.topnav li.right,
-    ul.topnav li {float: none;}
+@media screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .name {
+    flex-basis: 100%;
+  }
+
+  .topnav {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+
+  .main-header {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .main-header p {
+    padding-right: 40px;
+    text-align: left;
+  }
+
+  ul.topnav li.button {
+    background-color: #fafafa;
+  }
+
+
+  .back-to-home {
+    display: none
+  }
+
+  .bottom-button {
+    display: block;
+    float: right;
+  }
+
+  footer {
+    margin-bottom: 30px;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 1024px){
+
+
+    .grid {
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+
+    .topnav {
+      display: block;
+      padding: 0 30px;
+      margin: 0;
+    }
+
+    .name {
+      float: left;
+    }
+
+    .button {
+      float: right;
+    }
+
+
+    footer {
+      margin-bottom: 0;
+    }
+
 }
