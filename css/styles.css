@@ -1,0 +1,94 @@
+/* Global Layout Set-up */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* padding: 0; */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fafafa;
+}
+
+/* Nav Styles */
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+  display: block;
+  width: 100%;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 20px 10px 0 10px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li.name {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+ul.topnav li a:hover:not(.active) {
+  background-color: #111;
+  color: white;
+}
+
+ul.topnav li a.active {
+  color: white;
+  background-color: #111;
+}
+
+ul.topnav li.right {
+  float: right;
+}
+
+
+
+/* Section Styles */
+
+.wrapper {
+  background-color: white;
+  margin: 0 20px;
+}
+
+.profile-image {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 10px 40px;
+}
+
+.portfolio-images {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 10px 20px;
+}
+
+
+/* Styles for larger screens */
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+}
