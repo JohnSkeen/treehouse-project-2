@@ -23,6 +23,7 @@ ul.topnav {
     font-size: 1.2rem;
     font-weight: bold;
     overflow: hidden;
+    padding: 0;
 }
 
 
@@ -62,13 +63,13 @@ h1 {
   font-size: 1.2rem;
   font-family: 'Source Code Pro', monospace;
   text-transform: uppercase;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 35px;
+  padding-bottom: 25px;
   margin-bottom: 0;
 }
 
 h2 {
- font-size: 1.4rem;
+ font-size: 1.2rem;
 }
 
 .wrapper {
@@ -93,7 +94,7 @@ h2 {
 }
 
 .item {
-  margin: 0 5px 30px 5px;
+  margin: 0 7.5px 30px 7.5px;
 }
 
 .item img {
@@ -109,7 +110,13 @@ h2 {
 }
 
 .extra-content {
-  padding: 0 30px;
+  margin: auto;
+  width: 50%;
+  padding:;
+}
+
+.phone {
+  padding-top: 20px;
 }
 
 /* Styles for footer */
@@ -189,8 +196,14 @@ footer {
   }
 
   .main-header p {
+    margin-top: 0;
+    font-size: 1.35em;
     padding-right: 40px;
     text-align: left;
+  }
+
+  .extra-content p {
+    font-size: 1.35em;
   }
 
   ul.topnav li.button {
@@ -218,6 +231,13 @@ footer {
 
 @media screen and (min-width: 1024px){
 
+    .main-header p {
+      font-size: 1.15em;
+    }
+
+    .extra-content p {
+      font-size: 1.15em;
+    }
 
     .grid {
       display: grid;
@@ -226,7 +246,7 @@ footer {
 
     .topnav {
       display: block;
-      padding: 0 30px;
+      padding: 30px 30px 0 30px;
       margin: 0;
     }
 
